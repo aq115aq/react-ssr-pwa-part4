@@ -59,7 +59,7 @@ module.exports = [
     new SWPrecacheWebpackPlugin({
       // 默认情况下，插件会根据列表中的资源内容生成一个版本号 revision。
       // 但是使用 Webpack 构建时，通常都会指定静态资源的文件名格式
-      // 例如 [name].[hash:8].js ，实际上 [hash] 的作用和 revision 一样，就没必要让 Workbox 再为这些文件生成版本号了。
+      // 例如 [name].[hash:8].js ，实际上 [hash] 的作用和 revision 一样，就没必要再为这些文件生成版本号了。
       // 通过配置中的 dontCacheBustUrlsMatching，我们指示插件把这些文件的文件名作为版本号。
       dontCacheBustUrlsMatching: /\.\w{8}\./,
       filename: 'service-worker.js',
