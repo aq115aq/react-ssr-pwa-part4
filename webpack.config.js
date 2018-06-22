@@ -65,11 +65,11 @@ module.exports = [
       filename: 'service-worker.js',
       // 全局缓存, 匹配项全缓存下来
       staticFileGlobs: [
-        'build/**/**.*',
+        'build/**/**.jpg',
       ],
       // 过滤前缀
       stripPrefix: 'build/',
-      mergeStaticsConfig: true, // 在匹配staticFileGlobs后，排除staticFileGlobsIgnorePatterns内的，再缓存
+      mergeStaticsConfig: false, // 是否将webpack打包出的内容都缓存
       minify: false,
       // For unknown URLs, fallback to the index page
       navigateFallback: '/index.html',
