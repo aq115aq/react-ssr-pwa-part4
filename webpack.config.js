@@ -69,7 +69,7 @@ module.exports = [
       ],
       // 过滤前缀
       stripPrefix: 'build/',
-      mergeStaticsConfig: false, // 是否将webpack打包出的内容都缓存
+      mergeStaticsConfig: true, // 是否将webpack打包出的内容都缓存
       minify: false,
       // For unknown URLs, fallback to the index page
       navigateFallback: '/index.html',
